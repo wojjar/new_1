@@ -1,0 +1,484 @@
+
+/*===================================== CSS RESET ===========================================*/
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+ margin: 0;
+ padding: 0;
+ border: 0;
+ font-size: 100%;
+ font: inherit;
+ vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+ display: block;
+}
+body {
+ line-height: 1;
+}
+ol, ul {
+ list-style: none;
+}
+blockquote, q {
+ quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+ content: '';
+ content: none;
+}
+table {
+ border-collapse: collapse;
+ border-spacing: 0;
+}
+
+/*==============================================================*/
+
+* {
+	box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: "Oswald", Open Sans, Helvetica, sans-serif;
+}
+.container::before,
+.container::after {
+	clear: both;
+	content: "";
+	display: table;
+}
+.container {
+    width: 100%;                    
+    max-width: 1200px;             
+    margin: 0 auto;              
+}
+
+/*============================== Navbar ====================================*/
+#navigation {
+    position: fixed;
+    top: 0; 
+    width: 100%;
+    background-color: #302E74;
+    padding: 20px 20px;
+    z-index: 5; 
+}
+#navigation li {
+    padding: 0 10px;
+}
+#navigation li a {
+    color: #f2f2f2;
+}
+#navigation li a:hover {
+    background-color: #3B5CA9;
+}
+.navbar-brand,
+.navbar-brand:hover {
+    color: #f2f2f2;
+}
+.navbar-toggler-icon {
+    background: url("../images/icon_menu.png");
+    background-size: 100%; 
+}
+
+/*============================== Main ====================================*/
+/* Slider */
+.page-content {
+  display: flex;
+  height: 100vh;
+  max-width: 100%;
+}
+.flex-item {
+    width:100%;
+}
+#slideShow
+{ 
+    height: 100%;
+    width:100%;
+    position: relative;   
+}
+#slideShow img
+{
+    width: 100%;
+    position: absolute; 
+    opacity: 0;
+    height: 100%;
+   
+  
+}
+
+
+.imgToRotate
+{
+	position: absolute;
+    display: none;  
+}
+.current
+{
+	display: block;
+}
+
+
+
+
+
+
+
+
+.overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 2;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+.titleMessage {
+	position: absolute;
+    width: 100%;
+    height: 250px;
+    top: 50%;
+    z-index: 3;
+    text-align: center;
+}
+.titleMessage .heading p {
+	color:#fff;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    font-weight: 800;
+    letter-spacing: 7px;
+    font-size: 60px; 
+}
+.front-end {
+    padding: 20px;
+}
+
+/* Loader */
+.loader {
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+    z-index: 1000;
+}
+.loader .inside {
+	width: 100%;
+	height: 100%;
+	background: url(../images/loader.gif) center center no-repeat;
+}
+
+/*============================== O mnie ====================================*/
+.about {
+    background-color: #f5f5f5;
+    background-size: cover;
+    padding: 100px 0;
+}
+.aboutImage {
+	max-width: 100%;
+}
+.box,.myname{
+    font-family: "Oswald", Open Sans, Helvetica, sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+}
+.myname {
+    font-size: 22px;
+    padding: 10px 0;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+/*============================== Umiejętności ====================================*/
+#skills  {
+    text-align: center;
+    padding: 80px 0;
+    background-color: rgb(179, 177, 177);
+}
+.title-skills {
+    padding: 40px 0 30px 0;
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 700;
+    font-family: "Oswald", Open Sans, Helvetica, sans-serif;
+}
+.icon {
+    display: inline;
+    border: 0;
+    padding: 25px; 
+    border-radius: 20%;
+    margin: 0 auto;
+    cursor: pointer;
+    font-size: 50px;
+    color: red;   
+}
+.imgRedux {
+    padding-top: 16px;
+    width: 100px;
+}
+ul {
+    list-style: none;
+}
+
+/*============================== Portfolio ====================================*/
+.title-Portfolio {
+    padding: 30px;
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 700;
+    font-family: "Oswald", Open Sans, Helvetica, sans-serif;
+    zoom: 1;
+}
+.portfolio {
+    background-color: #f5f5f5;
+    background-size: cover;
+    padding: 70px 0 100px 0;
+}
+.portfolio .heading {
+	text-align: center;
+	padding-bottom: 40px;
+	width: 100%;
+}
+.items li {
+	display: inline-block;
+    padding: 5px;
+}
+.itemsContainer {
+   max-width: 100%;
+   height: auto ;
+}
+.items li img {
+	max-width: 100%;
+	-webkit-transition: all 0.2s linear, 1s;
+    -moz-transition: all 0.2s linear, 1s;
+    -o-transition: all 0.2s linear, 1s;
+    -ms-transition: all 0.2s linear, 1s;
+    -transition: all 0.2s linear, 1s;
+}
+.items .item {
+	position: relative;
+	display: block;
+	overflow: hidden;
+}
+.items .icons {
+	position: absolute;
+    width: 90px;
+    height: 40px;
+    left: 50%;
+    top: 50%;
+    margin: -20px auto 0 -47px;
+    text-align: center;
+    z-index: 3;
+}
+.items .icons i {
+	color: #fff;
+    font-size: 20px;
+    margin-top: 9px;
+}
+.items a {
+	width: 40px;
+    height: 40px;
+    background-color: #302E74;
+    position: relative;
+    display: inline-block;
+    -webkit-transition: all 0.2s linear, 0.2s;
+    -moz-transition: all 0.2s linear, 0.2s;
+    -o-transition: all 0.2s linear, 0.2s;
+    -ms-transition: all 0.2s linear, 0.2s;
+    -transition: all 0.2s linear, 0.2s;
+}
+.items .imageOverlay {
+	width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    -webkit-transition: all 0.2s linear, 1s;
+    -moz-transition: all 0.2s linear, 1s;
+    -o-transition: all 0.2s linear, 1s;
+    -ms-transition: all 0.2s linear, 1s;
+    -transition: all 0.2s linear, 1s;
+    cursor: pointer;
+}
+.items .item:hover .imageOverlay {
+	opacity: 1;
+}
+.items .openButton {
+	float: left;
+	left: -300px;
+}
+.items .projectLink {
+	float: right;
+	right: -300px;
+}
+.items .item:hover .openButton {
+	left: 0px;
+}
+.items .item:hover .projectLink {
+	right: 0px;
+}
+.items .item:hover img {
+	-webkit-transform: scale(1.05, 1.05);
+    -moz-transform: scale(1.05, 1.05);
+    -o-transform: scale(1.05, 1.05);
+    -ms-transform: scale(1.05, 1.05);
+    -transform: scale(1.05, 1.05);
+}
+.items {
+	padding: 0;
+}
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*============================== Kontakt ====================================*/
+#contact {
+    padding: 50px 0;
+    background-color: #302E74;
+    color: #fff;
+}
+.title-contact {
+    text-align: center;
+    padding: 40px;
+    font-size: 40px;
+    color: white;
+}
+.contactButton {
+	color: #fff;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    margin-left: auto;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 15px auto 0;
+    display: table;
+    padding: 15px 25px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: "proxima-nova", sans-serif;
+    transition: background-color 300ms ease-out;
+}
+.contactButton:hover {
+	text-decoration: none;
+    color: grey;
+	background-color: #fff;
+}
+.contact-mail{
+    color: white;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+    line-height: 30px;
+    font-family: "proxima-nova", sans-serif;
+    font-style: normal; 
+}
+.message {
+    font-family: -apple-system,BlinkMacSystemFont,
+    "Segoe UI","Helvetica Neue",
+    Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+.contact-items {
+    color: white;
+    font-size: 20px;
+}
+.contact-details {
+    background-color: black;
+}
+.socialMedia {
+    list-style: none;   
+    padding: 30px  0;
+    display: block;
+    text-align: center;    
+}
+.socialMedia li {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+ .icon-fa{
+    font-size: 50px;
+    padding: 20px;
+    text-rendering: auto;
+    color: #fff;
+}
+
+/*============================== Footer ====================================*/
+.copyright {
+	background-color: #000;
+	color: #fff;
+	padding: 30px 5px;
+}
+.copyright p {
+	margin: 0;
+}
+
+/*============================== Media Queries ==============================*/
+
+ @media(max-width: 767px){
+    /* Extra small devices (phones, less than 768px)  */
+   
+    .titleMessage .heading p  {
+        font-size: 15px;
+    }
+    .about {
+        padding: 30px 0;
+    }
+    .box, .myname{
+        text-align: center;
+    }
+    #skills:target
+    {
+       padding-top: 300px;
+    }
+    #about:target
+    {
+       padding-top: 300px;
+    }
+    #portfolio:target
+    {
+       padding-top: 300px;
+    }
+    #contact:target
+    {
+       padding-top: 300px;
+    }   
+}
+
+@media(min-width: 768px) and (max-width: 991px){
+    /* Small devices (tablets, 768px and up) */
+
+    .titleMessage .heading p  {
+        font-size: 25px;
+    }
+    .about {  
+        padding: 30px 0;
+    }
+    section {
+        text-align: justify;
+    }   
+}
+
+
+
+
+
